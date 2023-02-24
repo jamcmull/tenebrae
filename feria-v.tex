@@ -1,0 +1,65 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[11pt, twoside]{report}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{bbding}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{longtable}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+
+\titleformat{\chapter}[block]{\huge\scshape\filcenter}{}{1ex}{}
+\titleformat{\section}[block]{\LARGE\scshape\filcenter}{}{1ex}{}
+\titleformat{\subsection}[block]{\Large\scshape\filcenter}{}{1ex}{}
+\titleformat{\subsubsection}[block]{\large\bfseries\filcenter}{}{1ex}{}
+
+\newenvironment{versicles}{\par\leavevmode\parskip=0pt\nopagebreak}{}
+
+\begin{document}
+
+\chapter*{{\Large Feria Quinta\\} In C\oe na Domini.}
+
+\section*{Ad Matutinum.}
+
+\subsection*{In primo Nocturno.}
+
+\subsubsection*{Psalmus 68}
+
+\gresetinitiallines{1}
+\gregorioscore{antiphonae/ferv-m1}
+
+\gresetinitiallines{0}
+\gregorioscore{psalmi/incipit/68-8c}
+
+\input{psalmi/latini-anglicique/68-8.tex}
+
+\subsubsection*{Psalmus 69}
+
+\gresetinitiallines{1}
+\gregorioscore{antiphonae/ferv-m2}
+
+\gresetinitiallines{0}
+\gregorioscore{psalmi/incipit/69-8c}
+
+\input{psalmi/latini-anglicique/69-8.tex}
+
+\subsubsection*{Psalmus 70}
+
+\gresetinitiallines{1}
+\gregorioscore{antiphonae/ferv-m3}
+
+\gresetinitiallines{0}
+\gregorioscore{psalmi/incipit/70-8c}
+
+\input{psalmi/latini-anglicique/70-8.tex}
+
+Pater noster \textit{secreto.}
+
+\end{document}
