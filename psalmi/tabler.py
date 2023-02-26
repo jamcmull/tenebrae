@@ -17,7 +17,7 @@ if num_lines != len(english_lines):
 	print("The Latin and English files have a different number of lines.")
 
 with open(sys.argv[3], 'w', encoding="utf-8") as table:
-	table.write("\\begin{longtable}{p{10cm} | p{6cm}}\n")
+	table.write("\\begin{longtable}{@{\\hskip0pt} p{9.5cm} | p{6.5cm} @{\\hskip0pt}}\n")
 	
 	for i in range(num_lines):
 		latin_line = latin_lines[i*2]
@@ -26,6 +26,8 @@ with open(sys.argv[3], 'w', encoding="utf-8") as table:
 		latin_line = latin_line.replace("Ǽ", "\\'{\\AE}")
 		latin_line = latin_line.replace("œ", "\\oe")
 		latin_line = latin_line.replace("Œ", "\\OE")
+		# fix the space length after the verse number
+		latin_line = latin_line.split(" ", 1)[0] + "\\enspace " + latin_line.split(" ", 1)[1]
 		
 		english_line = english_lines[i]
 		# remove verse numbers
